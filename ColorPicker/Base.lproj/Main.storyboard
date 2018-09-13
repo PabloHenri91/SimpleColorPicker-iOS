@@ -1,24 +1,87 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" systemVersion="17A277" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
-        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ColorPicker" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Nv9-GP-p1W"/>
+                        <viewControllerLayoutGuide type="bottom" id="TFa-rB-kvW"/>
+                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="J5F-m5-mrt">
+                                <rect key="frame" x="0.0" y="612" width="375" height="55"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UgY-Q0-bwr">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="55"/>
+                                        <color key="tintColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <state key="normal" image="icons8-fill_color"/>
+                                        <connections>
+                                            <action selector="buttonStrokeColorAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="HiD-Kv-dIP"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.11372549019607843" green="0.11372549019607843" blue="0.11372549019607843" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="55" id="0fT-DU-1xM"/>
+                                    <constraint firstItem="UgY-Q0-bwr" firstAttribute="centerY" secondItem="J5F-m5-mrt" secondAttribute="centerY" id="15X-fV-Xag"/>
+                                    <constraint firstItem="UgY-Q0-bwr" firstAttribute="centerX" secondItem="J5F-m5-mrt" secondAttribute="centerX" id="Mae-B0-IEu"/>
+                                    <constraint firstItem="UgY-Q0-bwr" firstAttribute="height" secondItem="J5F-m5-mrt" secondAttribute="height" id="Nt8-xX-04g"/>
+                                    <constraint firstItem="UgY-Q0-bwr" firstAttribute="width" secondItem="J5F-m5-mrt" secondAttribute="width" id="nZL-4K-cVR"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1TH-jf-YfC">
+                                <rect key="frame" x="0.0" y="146" width="375" height="375"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="1TH-jf-YfC" secondAttribute="height" multiplier="1:1" id="PXA-mQ-w3V"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gel-dr-5lZ" customClass="ColorPickerView" customModule="ColorPicker" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="557" width="375" height="55"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="55" id="HfL-3x-yk6"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="0.098039215686274508" green="0.098039215686274508" blue="0.098039215686274508" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="UgY-Q0-bwr" firstAttribute="top" secondItem="gel-dr-5lZ" secondAttribute="bottom" id="6mK-qb-E2u"/>
+                            <constraint firstItem="1TH-jf-YfC" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="9Fi-8W-s1R"/>
+                            <constraint firstItem="TFa-rB-kvW" firstAttribute="top" secondItem="J5F-m5-mrt" secondAttribute="bottom" id="AFu-cc-Sfw"/>
+                            <constraint firstItem="1TH-jf-YfC" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="DYg-Ct-olE"/>
+                            <constraint firstItem="J5F-m5-mrt" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="aDM-4o-uf8"/>
+                            <constraint firstItem="1TH-jf-YfC" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="e2d-mI-EPR"/>
+                            <constraint firstItem="J5F-m5-mrt" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="fNH-q0-JP2"/>
+                            <constraint firstItem="gel-dr-5lZ" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="ncX-r5-VQe"/>
+                            <constraint firstItem="gel-dr-5lZ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="s3G-ap-dtz"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="colorPickerView" destination="gel-dr-5lZ" id="XI7-f2-Mzg"/>
+                        <outlet property="strokeColor" destination="1TH-jf-YfC" id="NAs-xa-Bnd"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="24.800000000000001" y="30.134932533733135"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="icons8-fill_color" width="33" height="33"/>
+    </resources>
 </document>

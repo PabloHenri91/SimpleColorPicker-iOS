@@ -12,6 +12,8 @@
 		6E26A95821499F250075E731 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6E26A95621499F250075E731 /* Main.storyboard */; };
 		6E26A95A21499F270075E731 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6E26A95921499F270075E731 /* Assets.xcassets */; };
 		6E26A95D21499F270075E731 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6E26A95B21499F270075E731 /* LaunchScreen.storyboard */; };
+		6E26A9672149A4810075E731 /* ColorPickerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6E26A9662149A4810075E731 /* ColorPickerView.xib */; };
+		6EF4392E214AA82700992A76 /* ColorPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EF4392D214AA82700992A76 /* ColorPickerView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +24,8 @@
 		6E26A95921499F270075E731 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6E26A95C21499F270075E731 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6E26A95E21499F270075E731 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6E26A9662149A4810075E731 /* ColorPickerView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ColorPickerView.xib; sourceTree = "<group>"; };
+		6EF4392D214AA82700992A76 /* ColorPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorPickerView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,12 +58,14 @@
 		6E26A95121499F250075E731 /* ColorPicker */ = {
 			isa = PBXGroup;
 			children = (
-				6E26A95221499F250075E731 /* AppDelegate.swift */,
-				6E26A95421499F250075E731 /* ViewController.swift */,
-				6E26A95621499F250075E731 /* Main.storyboard */,
-				6E26A95921499F270075E731 /* Assets.xcassets */,
-				6E26A95B21499F270075E731 /* LaunchScreen.storyboard */,
 				6E26A95E21499F270075E731 /* Info.plist */,
+				6E26A95221499F250075E731 /* AppDelegate.swift */,
+				6EF4392D214AA82700992A76 /* ColorPickerView.swift */,
+				6E26A95421499F250075E731 /* ViewController.swift */,
+				6E26A95921499F270075E731 /* Assets.xcassets */,
+				6E26A9662149A4810075E731 /* ColorPickerView.xib */,
+				6E26A95B21499F270075E731 /* LaunchScreen.storyboard */,
+				6E26A95621499F250075E731 /* Main.storyboard */,
 			);
 			path = ColorPicker;
 			sourceTree = "<group>";
@@ -124,6 +130,7 @@
 			files = (
 				6E26A95D21499F270075E731 /* LaunchScreen.storyboard in Resources */,
 				6E26A95A21499F270075E731 /* Assets.xcassets in Resources */,
+				6E26A9672149A4810075E731 /* ColorPickerView.xib in Resources */,
 				6E26A95821499F250075E731 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -135,6 +142,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6EF4392E214AA82700992A76 /* ColorPickerView.swift in Sources */,
 				6E26A95521499F250075E731 /* ViewController.swift in Sources */,
 				6E26A95321499F250075E731 /* AppDelegate.swift in Sources */,
 			);
@@ -213,7 +221,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -267,7 +275,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
@@ -280,7 +288,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_IDENTITY = "";
 				INFOPLIST_FILE = ColorPicker/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -297,7 +305,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_IDENTITY = "";
 				INFOPLIST_FILE = ColorPicker/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
